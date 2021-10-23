@@ -4,6 +4,7 @@ from django.http import JsonResponse
 from rest_framework import response, viewsets
 
 
+from rest_framework import generics 
 from rest_framework.views import APIView
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -12,6 +13,7 @@ from account import serializers
 from .models import *
 from rest_framework.exceptions import AuthenticationFailed
 import jwt, datetime 
+
 
 
 # Create your views here.
@@ -107,3 +109,5 @@ class LogoutView(APIView):
             'message' : 'success'
         }
         return response
+
+
